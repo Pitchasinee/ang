@@ -1,8 +1,14 @@
-<form[formGroup] = "formGroup">
+<form [formGroup] = "formGroup"(ngSubmit)="onSubmit(formGroup)">
   <div>
-    <input type = "text" [formControl] ="firstname"  placeholder = "firstname">
+    <input type = "text" formControlName ="firstname"  placeholder = "firstname">
     <br><br>
-    <input type = "text" [formControl] ="lastname"  placeholder = "lastname">
+    <input type = "text" formControlName ="lastname"  placeholder = "lastname">
+    <br><br>
+    <input type = "text" formControlName ="Email"  placeholder = "Email">
+    <br><br>
+    <input type = "number" min =0 max=0 formControlName ="Age"  placeholder = "Age">
+    
+    
   </div>
-
+<br><button>submit</button>
 </form>
